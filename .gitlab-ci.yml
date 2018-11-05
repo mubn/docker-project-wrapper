@@ -1,0 +1,31 @@
+image: docker:dind
+
+before_script:
+  - apk add -U make bats
+
+stages:
+  - build
+  - test
+  - push
+
+build:
+  stage: build
+  script:
+    - make build
+  only:
+    - branches
+
+test:
+  stage: test
+  script:
+    - make test
+  only:
+    - branches
+
+push:
+  stage: push
+  script:
+    - make push
+    - make cleanup
+  only:
+    - master

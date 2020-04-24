@@ -2,29 +2,23 @@
 
 ## Maintain the image / application
 
-Build the image
+`make`
 
-```make build```
+```
+Variables:
+TAG             - Docker image tag (default: latest)
+REGISTRY        - Docker registry (default: index.docker.io)
+PROJECT         - Project name (default: webproject)
 
-Run the app
-
-```make run```
-
-Stop the app
-
-```make stop```
-
-Test the app
-
-```make test```
-
-Push the image to a registry
-
-```make push```
-
-Remove the image locally
-
-```make cleanup```
+Targets:
+build           - Build the docker image
+run             - Build the docker image and run the docker container
+stop            - Stop and delete the docker container
+test            - Run, test, stop and delete the docker container
+logs            - Show logs of the running application
+push            - Push the docker image
+cleanup         - Remove the docker image from local storage.
+```
 
 ## CI/CD
 

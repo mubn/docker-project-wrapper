@@ -1,4 +1,4 @@
-REGISTRY := registry.marekurban.de
+REGISTRY := index.docker.io
 TAG := latest
 PROJECT := webproject
 
@@ -7,7 +7,7 @@ help:
 	@echo ""
 	@echo "Variables:"
 	@echo "TAG      	- Docker image tag (default: latest)"
-	@echo "REGISTRY 	- Docker registry (default: registry.marekurban.de)"
+	@echo "REGISTRY 	- Docker registry (default: index.docker.io)"
 	@echo "PROJECT  	- Project name (default: webproject)"
 	@echo ""
 	@echo "Targets:"
